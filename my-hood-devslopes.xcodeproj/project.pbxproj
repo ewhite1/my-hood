@@ -12,6 +12,8 @@
 		2B59D3961CAA55A000186324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D3941CAA55A000186324 /* Main.storyboard */; };
 		2B59D3981CAA55A000186324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D3971CAA55A000186324 /* Assets.xcassets */; };
 		2B59D39B1CAA55A000186324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D3991CAA55A000186324 /* LaunchScreen.storyboard */; };
+		2B59D3A41CAA570A00186324 /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59D3A31CAA570A00186324 /* post.swift */; };
+		2B59D3A71CAA62FA00186324 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59D3A61CAA62FA00186324 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2B59D3971CAA55A000186324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B59D39A1CAA55A000186324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B59D39C1CAA55A000186324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B59D3A31CAA570A00186324 /* post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
+		2B59D3A61CAA62FA00186324 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		2B59D38F1CAA55A000186324 /* my-hood-devslopes */ = {
 			isa = PBXGroup;
 			children = (
+				2B59D3A51CAA629600186324 /* View */,
+				2B59D3A21CAA56F400186324 /* model */,
 				2B59D3901CAA55A000186324 /* AppDelegate.swift */,
 				2B59D3921CAA55A000186324 /* ViewController.swift */,
 				2B59D3941CAA55A000186324 /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				2B59D39C1CAA55A000186324 /* Info.plist */,
 			);
 			path = "my-hood-devslopes";
+			sourceTree = "<group>";
+		};
+		2B59D3A21CAA56F400186324 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2B59D3A31CAA570A00186324 /* post.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		2B59D3A51CAA629600186324 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B59D3A61CAA62FA00186324 /* PostCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B59D3A41CAA570A00186324 /* post.swift in Sources */,
 				2B59D3931CAA55A000186324 /* ViewController.swift in Sources */,
 				2B59D3911CAA55A000186324 /* AppDelegate.swift in Sources */,
+				2B59D3A71CAA62FA00186324 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
