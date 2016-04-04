@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class DataService {
     static let instance = DataService()
-    
+    let KEY_POSTS = "posts"
     private var _loadedPosts = [Post]()
     
     var loadedPosts: [Post] {
@@ -18,17 +18,33 @@ class DataService {
     }
     
     func savePosts() {
-        
+        let postsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPosts)
+        NSUserDefaults.standardUserDefaults().setObject(postsData, forKey: "posts")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     func loadPosts() {
+         if let postsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData {
+            
+            if let postsArray = NSKeyedUnarchiver.unarchiveObjectWithData(postsData) as? [Post] {
+                _loadedPosts = postsArray
+            }
+        }
+        
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postLoaded", object: nil))
         
     }
-    func saveImageAndCreatePath(image: UIImage){
-        
+    func saveImageAndCreatePath(image: UIImage) -> String{
+        let imgData = UIImagePNGRepresentation(image)
+        let imgPath = "image\(NSDate.timeIntervalSinceReferenceDate()).png"
+        let fullPath = documentsPathForFileName(imgPath)
+        imgData?.writeToFile(fullPath, atomically: true)
+        return imgPath
     }
     
-    func imageForPath(path: String) {
-        
+    func imageForPath(path: String) -> UIImage? {
+        let fullPath = documentsPathForFileName(path)
+        let image = UIImage(named: fullPath)
+        return image
     }
     
     func addPost(post: Post) {
@@ -36,5 +52,13 @@ class DataService {
         savePosts()
         loadPosts()
         
+    }
+    
+    
+    
+    func documentsPathForFileName(name:String) -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let fullPath = paths[0] as NSString
+        return fullPath.stringByAppendingPathComponent(name)
     }
 }
