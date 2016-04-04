@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0CE86A1CB1E4CD0091EFB5 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0CE8691CB1E4CD0091EFB5 /* AddPostVC.swift */; };
+		2B0CE86D1CB1F4990091EFB5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0CE86C1CB1F4990091EFB5 /* DataService.swift */; };
 		2B59D3911CAA55A000186324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59D3901CAA55A000186324 /* AppDelegate.swift */; };
 		2B59D3931CAA55A000186324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59D3921CAA55A000186324 /* ViewController.swift */; };
 		2B59D3961CAA55A000186324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B59D3941CAA55A000186324 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0CE8691CB1E4CD0091EFB5 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		2B0CE86C1CB1F4990091EFB5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2B59D38D1CAA55A000186324 /* my-hood-devslopes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-hood-devslopes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B59D3901CAA55A000186324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B59D3921CAA55A000186324 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0CE8681CB1E4640091EFB5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B59D3921CAA55A000186324 /* ViewController.swift */,
+				2B0CE8691CB1E4CD0091EFB5 /* AddPostVC.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		2B0CE86B1CB1F4820091EFB5 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				2B0CE86C1CB1F4990091EFB5 /* DataService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		2B59D3841CAA55A000186324 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +79,12 @@
 		2B59D38F1CAA55A000186324 /* my-hood-devslopes */ = {
 			isa = PBXGroup;
 			children = (
+				2B0CE86B1CB1F4820091EFB5 /* services */,
+				2B0CE8681CB1E4640091EFB5 /* controller */,
 				2B59D3A51CAA629600186324 /* View */,
 				2B59D3A21CAA56F400186324 /* model */,
 				2B59D3901CAA55A000186324 /* AppDelegate.swift */,
-				2B59D3921CAA55A000186324 /* ViewController.swift */,
-				2B59D3941CAA55A000186324 /* Main.storyboard */,
 				2B59D3971CAA55A000186324 /* Assets.xcassets */,
-				2B59D3991CAA55A000186324 /* LaunchScreen.storyboard */,
 				2B59D39C1CAA55A000186324 /* Info.plist */,
 			);
 			path = "my-hood-devslopes";
@@ -81,6 +101,8 @@
 		2B59D3A51CAA629600186324 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B59D3991CAA55A000186324 /* LaunchScreen.storyboard */,
+				2B59D3941CAA55A000186324 /* Main.storyboard */,
 				2B59D3A61CAA62FA00186324 /* PostCell.swift */,
 			);
 			name = View;
@@ -159,6 +181,8 @@
 			files = (
 				2B59D3A41CAA570A00186324 /* post.swift in Sources */,
 				2B59D3931CAA55A000186324 /* ViewController.swift in Sources */,
+				2B0CE86A1CB1E4CD0091EFB5 /* AddPostVC.swift in Sources */,
+				2B0CE86D1CB1F4990091EFB5 /* DataService.swift in Sources */,
 				2B59D3911CAA55A000186324 /* AppDelegate.swift in Sources */,
 				2B59D3A71CAA62FA00186324 /* PostCell.swift in Sources */,
 			);
@@ -312,6 +336,7 @@
 				2B59D3A11CAA55A000186324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
